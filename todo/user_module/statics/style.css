@@ -1,0 +1,16 @@
+
+body{
+    background-color: transparent;
+}
+
+#input_div{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 2%;
+}
+
+.table{
+    margin-right: auto;
+    margin-left: auto;
+}

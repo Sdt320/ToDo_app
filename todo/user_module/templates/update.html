@@ -16,45 +16,23 @@
   </head>
   <body>
     <h1 class="text-center">MY TODO APP</h1>
-    <form method="post" action="/">
+    <form method="post" action="">
       {% csrf_token %}
       <div class="input-group mb-3" id="input_div">
         <span class="input-group-text" id="inputGroup-sizing-default"
           >Task</span
         >
-        <input  required
+        <input 
           type="text"
           class="form-control"
           aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-default"
           name="title"
         />
-        <button type="submit" class="btn btn-primary">ADD</button>
+        <button type="submit" class="btn btn-primary">Update</button>
 
       </div>
     </form>
-
-    <table class="table">
-      <thead>
-          <tr>
-              <th scope="col">Task</th>
-              <th scope="col">Created At</th>
-              <th scope="col">Actions</th>
-          </tr>
-      </thead>
-      <tbody>
-          {% for task in tasks %}
-          <tr>
-              <td>{{ task.title }}</td>
-              <td>{{ task.created_at }}</td>
-              <td>
-                  <a href="{% url 'update_task' task.id %}" class="btn btn-success">Update</a>
-                  <a href="{% url 'delete_task' task.id %}" class="btn btn-danger">Delete</a>
-              </td>
-          </tr>
-          {% endfor %}
-      </tbody>
-  </table>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
